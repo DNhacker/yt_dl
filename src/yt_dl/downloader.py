@@ -2,6 +2,7 @@ import os
 import sys
 from typing import Optional, Tuple
 from pytube import YouTube
+from pathlib import Path
 from pytube.exceptions import PytubeError
 from moviepy.editor import VideoFileClip, AudioFileClip
 from tqdm import tqdm
