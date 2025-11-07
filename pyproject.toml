@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yt-dl"
+dynamic = ["version"]
+description = "A Python library to download YouTube videos in HD MP4 and MP3 formats"
+readme = "README.md"
+authors = [
+    {name = "DNhacker", email = "darknighthacker0@gmail.com"},
+]
+license = {text = "MIT"}
+keywords = ["youtube", "download", "video", "mp4", "mp3", "hd"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "pytube>=15.0.0",
+    "moviepy>=1.0.3",
+    "tqdm>=4.64.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "flake8"]
+
+[project.urls]
+Homepage = "https://github.com/DNhacker/yt_dl"
+BugTracker = "https://github.com/DNhacker/yt_dl/new/main/issues"
+
+[project.scripts]
+yt-dl-hd = "yt_dl.downloader:main"
